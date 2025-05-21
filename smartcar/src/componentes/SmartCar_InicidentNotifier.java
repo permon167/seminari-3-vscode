@@ -62,4 +62,16 @@ public class SmartCar_InicidentNotifier extends MyMqttClient {
 
 	}
 	
+	public void publish(String topic, String message) {
+	    try {
+	        MqttTopic mqttTopic = myClient.getTopic(topic);
+	        MqttMessage mqttMessage = new MqttMessage(message.getBytes());
+	        mqttMessage.setQos(0);
+	        mqttMessage.setRetained(false);
+	        mqttTopic.publish(mqttMessage);
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	}
+	
 }

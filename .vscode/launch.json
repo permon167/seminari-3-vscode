@@ -10,8 +10,9 @@
             "request": "launch",
             "mainClass": "SmartCarStarterApp",
             "args": [
-                "SmartCar-1234ABC",
-                "tcp://ttmi008.iot.upv.es:1883"
+                "5",
+                "tcp://tambori.dsic.upv.es:1883",
+                "120"
             ]
         }
     ]
